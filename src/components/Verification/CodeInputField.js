@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React , {useRef , useEffect} from 'react';
-import { CodeInputSection , HiddenTextInput , CodeInputsContainer , CodeInput , CodeInputFocused} from './index';
+import { CodeInputSection , HiddenTextInput , CodeInputsContainer , CodeInput , CodeInputFocused} from '../Shared/styles';
 import { useState } from 'react';
 
 export default function CodeInputField({setPinReady,code,setCode,maxLength}) {
