@@ -37,7 +37,7 @@ export default function Verification({navigation,route:{params:{phoneNumber}}}) 
       navigation.navigate('CreateAnAccount');
     }
     else if (code === '1111' && verificationSuccessfull) {
-      navigation.navigate('Home');
+      navigation.navigate('BottomTab');
     }
   }
 

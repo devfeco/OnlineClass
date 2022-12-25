@@ -22,7 +22,7 @@ export default function CreateAnAccount(props) {
         setIsSubmitting(true);
         try{
             await Register(id);
-            navigation.navigate("Home");
+            navigation.navigate("BottomTab");
         }catch(e){
             Alert("Hatalı giriş");
         }

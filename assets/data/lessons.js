@@ -1,0 +1,22 @@
+export default [
+    {
+      id:1,
+      name:'Matematik',
+      image:'https://img.freepik.com/premium-vector/math-education-pattern-with-handwritten-formulas_40453-412.jpg?w=996'
+    },
+    {
+      id:2,
+      name:'Fizik',
+      image:'https://img.freepik.com/premium-vector/hand-drawn-physics-doodle-set_160308-213.jpg?w=1060'
+    },
+    {
+      id:3,
+      name:'Kimya',
+      image:'https://img.freepik.com/free-vector/science-scribbles_23-2147501583.jpg?w=740&t=st=1671724811~exp=1671725411~hmac=39b374cc1aedae2ce22be26eb6dddce03cd09bca32c722dc862397f79489250b'
+    },
+    {
+      id:4,
+      name:'Biyoloji',
+      image:'https://img.freepik.com/free-vector/chemistry-equipment-sketch-seamless_98292-4695.jpg?w=740&t=st=1671725237~exp=1671725837~hmac=843efef61cd15c849a5d1afca4ee23db71acd4b5045c12ac10fa48c024d1b8b3'
+    }
+  ]

@@ -22,7 +22,7 @@ export default function Onboarding(props) {
 
     const {navigation} = props;
     const goToAuth = () => {
-        navigation.navigate('Authentication');
+        navigation.navigate('BottomTab');
     }
 
     return (
@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
     body:{
         flex:.4,
         alignItems:'center',
-        justifyContent:'space-around'
+        justifyContent:'space-around',
     }
 })

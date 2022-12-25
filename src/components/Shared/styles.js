@@ -1,8 +1,9 @@
 import styled from 'styled-components/native'
 import Contants from 'expo-constants'
-import { View } from 'react-native';
+import { Dimensions } from 'react-native';
 
 const StatusBarHeight = Contants.statusBarHeight;
+const {height , width} = Dimensions.get("screen");
 
 export const colors = {
     primary:'#3D5CFF',
@@ -14,7 +15,8 @@ export const colors = {
     red:'#EF4444',
     brand:'#6D28D9',
     tertiary:'#1F2937',
-    darkLight:'#9CA3AF'
+    darkLight:'#9CA3AF',
+    frost:'#f9f6f6'
 };
 
 const {white,primary,secondary,disable,grey,green} = colors;
@@ -123,4 +125,52 @@ export const ModalView = styled.View`
     shadow-opacity:0.25;
     shadow-radius:4px;
     width:90%;
+`
+//Modal components end
+
+//Home Screen Components 
+
+export const LessonCardContainer = styled.View`
+    width:100%;
+    min-width:195px
+    flex:1;
+    background-color:red;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    margin:5px 5px;
+    height:100px
+`
+
+export const HomeHeader = styled.View`
+    background-color:${primary};
+    height:${height*0.1}px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    margin-bottom:5px;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding:15px 20px;
+`
+export const Avatar = styled.Image`
+    height:50px;
+    width:50px;
+    border-radius:500px;
+    border-width:1px;
+    border-color:${secondary};
+`
+
+export const HomeBody = styled.View`
+    height:${height*0.78}px;
+`
+
+export const Seperator = styled.View`
+    height:2px;
+    background-color:${disable};
+    width:96%;
+    margin-vertical:10px;
+    border-radius:500px;
+    justify-content:center;
+    margin-left:${width*0.02}px;
 `

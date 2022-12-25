@@ -9,8 +9,9 @@ import {colors} from '../Shared/styles';
 import Onboarding from '../../screens/Onboarding';
 import Authentication from '../../screens/Authentication';
 import Verification from '../../screens/Verification';
-import Home from '../../screens/Home';
-import CreateAnAccount from '../../screens/CreateAnAccount'
+import CreateAnAccount from '../../screens/CreateAnAccount';
+import Camera from '../../screens/Camera';
+import BottomTab from './BottomTab';
 
 export default function Router() {
     const Stack = createNativeStackNavigator();
@@ -47,8 +48,8 @@ export default function Router() {
                   component={CreateAnAccount} 
                   options={{headerShown:false}}/>
               <Stack.Screen 
-                  name='Home' 
-                  component={Home} 
+                  name='BottomTab' 
+                  component={BottomTab} 
                   options={{headerShown:false}}/>
         </Stack.Navigator>
     </NavigationContainer>
