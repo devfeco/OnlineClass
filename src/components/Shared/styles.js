@@ -88,21 +88,24 @@ export const HiddenTextInput = styled.TextInput`
 `;
 
 export const CodeInputsContainer = styled.Pressable`
-    width:70%;
+    width:90%;
     flex-direction:row;
     justify-content:space-between;
 `;
 
 export const CodeInput = styled.View`
     border-color:${grey};
-    min-width:15%;
     border-width:2px;
     border-radius:10px;
-    padding:12px
+    height:70px;
+    width:70px;
+    justify-content:center;
+    align-items:center
 `;
 
 export const CodeInputFocused = styled(CodeInput)`
-    border-color:${colors.primary}
+    border-color:${colors.primary};
+    background-color:rgba(61,92,255,0.1)
 `
 //Verification Components End
 
@@ -110,7 +113,7 @@ export const CodeInputFocused = styled(CodeInput)`
 export const ModalContainer = styled(StyledContainer)`
     justify-content:center;
     align-items:center;
-    background-color:rgba(0,0,0,0.7);
+    background-color:rgba(0,0,0,0.2);
 `
 
 export const ModalView = styled.View`

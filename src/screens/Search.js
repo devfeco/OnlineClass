@@ -1,9 +1,9 @@
-import { View, Text } from 'react-native'
+import { View,Image, Text } from 'react-native'
 import React from 'react'
 
 export default function Search() {
   return (
-    <View>
+    <View style={{flex:1}}>
       <Text>Search</Text>
     </View>
   )

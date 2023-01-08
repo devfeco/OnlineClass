@@ -27,7 +27,7 @@ export default function BottomTab() {
           tabBarStyle:{
             display:'none'
           },
-          tabBarButton:(props)=><CustomTabButton {...props}/>
+          tabBarButton:(props)=><CustomTabButton {...props}/>,
         }}/>
         <Tab.Screen name={'Answers'} component={Answers} options={{
           tabBarIcon:({color})=><Ionicons name='file-tray-outline' size={24} color={color}/>

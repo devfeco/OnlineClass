@@ -1,32 +1,22 @@
 import { StyleSheet, Text, View , Image } from 'react-native'
-import React, { useCallback } from 'react'
-import {useFonts} from 'expo-font';
-import * as SplashScreen from 'expo-splash-screen';
+import React from 'react'
 import Button from '../components/Shared/Button';
 import {colors} from '../components/Shared/styles';
-
-SplashScreen.preventAutoHideAsync();
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Onboarding(props) {
-    const [fontsLoaded] = useFonts({
-        'KanitL':require('../../assets/fonts/Kanit-Light.ttf'),
-    });
-
-    const onLayoutRootView = useCallback(async () => {
-        if (fontsLoaded) 
-            await SplashScreen.hideAsync();
-    },[fontsLoaded]);
-
-    if(!fontsLoaded)
-        return null;
-
     const {navigation} = props;
-    const goToAuth = () => {
-        navigation.navigate('BottomTab');
+    const goToAuth = async  () => {
+        try{
+            await AsyncStorage.setItem('@viewedOnboarding' , 'true');
+            navigation.navigate('BottomTab');
+        }catch(err){
+            console.error('Error @setItem: ',err);
+        }
     }
 
     return (
-        <View style={styles.container} onLayout={onLayoutRootView}>
+        <View style={styles.container}>
             <View style={styles.illustration}>
                 <Image source={require('../../assets/images/onboarding.png')} style={styles.image}/>
             </View>

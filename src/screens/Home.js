@@ -1,5 +1,5 @@
-import {StatusBar,Dimensions,Text,SafeAreaView} from 'react-native'
-import React from 'react'
+import {StatusBar,Dimensions,Text,BackHandler} from 'react-native'
+import React,{useEffect} from 'react'
 import { StyledContainer , colors , HomeHeader, HomeBody, Seperator, Avatar} from '../components/Shared/styles'
 import QuestionCard from '../components/Shared/QuestionCard'
 import {FlatList} from 'native-base'
@@ -8,7 +8,7 @@ import lessons from '../../assets/data/lessons'
 
 const {height,width} = Dimensions.get("window");
 
-export default function Home() {
+export default function Home(props) {
 
   const dummyData = [
     {
@@ -39,6 +39,17 @@ export default function Home() {
   ]
 
   const {height , width} = Dimensions.get('window');
+  const {goBack,canGoBack} = props.navigation;
+
+  useEffect(()=>{
+    BackHandler.addEventListener('hardwareBackPress',backAction);
+    return () => BackHandler.removeEventListener('hardwareBackPress',backAction);
+  });
+
+  const backAction = () => {
+      BackHandler.exitApp();
+      return true
+  }
 
   return (
     <StyledContainer style={{paddingTop:-30}}>

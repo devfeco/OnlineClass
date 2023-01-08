@@ -36,7 +36,7 @@ export default function VerificationModal({
 
 const SuccessContent = ({buttonHandler}) => {
   return(
-    <ModalView>
+    <ModalView style={{backgroundColor:'rgba(234,240,240,0.95)'}}>
       <Ionicons name='checkmark-circle' size={100} color={colors.green}/>
       <PageTitle 
         style={{fontSize:25,marginBottom:5}}>
@@ -55,7 +55,7 @@ const SuccessContent = ({buttonHandler}) => {
 
 const FailedContent = ({errorMsg,buttonHandler}) => {
   return(
-    <ModalView>
+    <ModalView style={{backgroundColor:'rgba(234,240,240,0.95)'}}>
       <Ionicons name='close-circle' size={100} color={colors.red}/>
       <PageTitle 
         style={{fontSize:25,marginBottom:5}}>

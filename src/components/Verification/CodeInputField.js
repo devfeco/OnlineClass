@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React , {useRef , useEffect} from 'react';
-import { CodeInputSection , HiddenTextInput , CodeInputsContainer , CodeInput , CodeInputFocused} from '../Shared/styles';
+import { CodeInputSection , HiddenTextInput , CodeInputsContainer , CodeInput , CodeInputFocused, colors} from '../Shared/styles';
 import { useState } from 'react';
 
 export default function CodeInputField({setPinReady,code,setCode,maxLength}) {
@@ -34,7 +34,7 @@ export default function CodeInputField({setPinReady,code,setCode,maxLength}) {
         const StyledCodeInput = inputContainerIsFocused && isDigitFocused ? CodeInputFocused : CodeInput
         return(
             <StyledCodeInput key={index}>
-                <Text style={{fontFamily:"KanitL",fontSize:36,textAlign:"center"}}>{digit}</Text>
+                <Text style={{fontFamily:"KanitL",fontSize:48,textAlign:"center",color:colors.tertiary}}>{digit}</Text>
             </StyledCodeInput>
         )
     }
