@@ -28,7 +28,6 @@ export const StyledContainer = styled.View`
 `;
 
 export const InnerContainer = styled.View`
-    flex:1;
     width:100%;
     align-items:center;
     padding-top:${StatusBarHeight + 30}px;
@@ -134,46 +133,53 @@ export const ModalView = styled.View`
 //Home Screen Components 
 
 export const LessonCardContainer = styled.View`
-    width:100%;
-    min-width:195px
+    width:50%;
+    min-width:200px
     flex:1;
     background-color:red;
     align-items:center;
     justify-content:center;
     border-radius:20px;
     margin:5px 5px;
-    height:100px
+    height:90%
 `
-
-export const HomeHeader = styled.View`
-    background-color:${primary};
-    height:${height*0.1}px;
-    border-bottom-left-radius:20px;
-    border-bottom-right-radius:20px;
-    margin-bottom:5px;
-    flex-direction:row;
-    justify-content:space-between;
-    align-items:flex-end;
-    padding:15px 20px;
-`
-export const Avatar = styled.Image`
+//Input Components
+export const InputContainer = styled.View`
+    width:90%;
     height:50px;
-    width:50px;
-    border-radius:500px;
+    border-radius:10px;
     border-width:1px;
-    border-color:${secondary};
-`
-
-export const HomeBody = styled.View`
-    height:${height*0.78}px;
-`
-
-export const Seperator = styled.View`
-    height:2px;
-    background-color:${disable};
-    width:96%;
-    margin-vertical:10px;
-    border-radius:500px;
+    flex-direction:row;
     justify-content:center;
-    margin-left:${width*0.02}px;
+    align-items:center;
+    border-color:#ccc;
+`
+
+export const ActionSheetButton = styled.TouchableOpacity`
+    width:95%;
+    height:100%;
+    margin-horizontal:5px;
+    justify-content:center;
+`
+
+export const TextInput = styled.TextInput`
+    width:95%;
+    height:100%;
+    fontSize:18px;
+    margin-horizontal:5px;
+`
+
+export const ButtonText = styled.Text`
+    font-size:18px;
+`
+
+export const PlaceHolder = styled.Text`
+    position:absolute;
+    background-color:white;
+    top:-10px;
+    left:10px;
+    zIndex:10;
+    text-align:center;
+    padding-horizontal:2px;
+    color:#454545;
 `

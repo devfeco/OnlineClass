@@ -1,12 +1,16 @@
 import { View, Text , Image} from 'react-native'
 import React from 'react'
-import { StyledContainer } from '../components/Shared/styles'
+import { colors, StyledContainer } from '../components/Shared/styles'
+import Header from '../components/AskQuestion/Header';
+import QuestionForm from '../components/AskQuestion/QuestionForm';
+
 
 export default function AskQuestion(props) {
   const {image} = props.route.params;
   return (
-    <StyledContainer>
-      <Image source={{uri:image}} style={{height:"50%",width:"100%",resizeMode:"contain",transform:[{rotate:"270deg"}]}}/>
+    <StyledContainer style={{alignItems:'center',paddingTop:20}}>
+      <Header image={image}/>
+      <QuestionForm navigation={props.navigation}/>
     </StyledContainer>
   )
 }

@@ -38,7 +38,16 @@ export default function Router() {
           headerStyle:{
             backgroundColor:colors.white
           }
-        }}>
+        }} initialRouteName={'OnBoarding'}>
+          <Stack.Screen 
+                name='BottomTab' 
+                component={BottomTab} 
+                options={{headerShown:false}}/>
+            <Stack.Screen
+              name='AskQuestion'
+              component={AskQuestion}
+              options={{headerShown:false}}
+            />
             {
               viewedOnboarding || 
               <>
@@ -69,15 +78,6 @@ export default function Router() {
                       options={{headerShown:false}}/>
               </>
             }
-            <Stack.Screen 
-                name='BottomTab' 
-                component={BottomTab} 
-                options={{headerShown:false}}/>
-            <Stack.Screen
-              name='AskQuestion'
-              component={AskQuestion}
-              options={{headerShown:false}}
-            />
         </Stack.Navigator>
     </NavigationContainer>
   )

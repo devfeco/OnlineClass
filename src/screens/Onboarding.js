@@ -9,7 +9,7 @@ export default function Onboarding(props) {
     const goToAuth = async  () => {
         try{
             await AsyncStorage.setItem('@viewedOnboarding' , 'true');
-            navigation.navigate('BottomTab');
+            navigation.navigate('Authentication');
         }catch(err){
             console.error('Error @setItem: ',err);
         }

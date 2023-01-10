@@ -1,0 +1,27 @@
+export default [
+    {
+      id:1,
+      name:'Matematik',
+      image:'../../assets/images/math.jpg'
+    },
+    {
+      id:2,
+      name:'Fizik',
+      image:'../../assets/images/fizik.jpg'
+    },
+    {
+      id:3,
+      name:'Kimya',
+      image:'../../../assets/images/kimya.jpg'
+    },
+    {
+      id:4,
+      name:'Biyoloji',
+      image:'../../assets/images/biyoloji.jpg'
+    },
+    {
+      id:5,
+      name:'Türkçe',
+      image:'../../assets/images/turkce.jpg'
+    }
+  ]

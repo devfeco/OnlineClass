@@ -25,8 +25,8 @@ export default function QuestionCard(props) {
           <InnerContainer>
             <Image source={dummyMathImg} alt={'question image'} resizeMode={'stretch'} style={{borderRadius:20}}/>
             <TextContainer>
-              <Text style={{fontSize:24,fontFamily:'KanitL',color:colors.white}}>Matematik</Text>
-              <Text style={{fontSize:18,fontFamily:'KanitL',color:colors.white}}>İki Bilinmeyenli Denklem</Text>
+              <Text style={{fontSize:22,fontFamily:'KanitL',color:colors.white}}>Matematik</Text>
+              <Text style={{fontSize:16,fontFamily:'KanitL',color:colors.white}}>İki Bilinmeyenli Denklem</Text>
             </TextContainer>
           </InnerContainer>
         }
@@ -47,7 +47,7 @@ const InnerContainer = styled.View`
 const TextContainer = styled.View`
   width:90%;
   flex-direction:row;
-  justify-content:space-around;
+  justify-content:space-evenly;
   align-items:center;
   position:absolute;
   background-color:rgba(61,92,255,0.8);

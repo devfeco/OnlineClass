@@ -61,7 +61,6 @@ export default function CreateAnAccount(props) {
             </TopHalf>
             <BottomHalf style={{alignItems:'center'}}>
             <Input 
-                fontFamily={'KanitL'}
                 onChangeText={text=>setFullname(text)}
                 value={fullname}
                 onBlur={()=>{
@@ -69,12 +68,8 @@ export default function CreateAnAccount(props) {
                 }}
                 onFocus={()=>setFocused(true)}
                 borderColor={isFocused ? colors.primary : '#ccc'}
-                title={"Ad Soyad"}
                 />
                 <ActionSheetButton
-                    title={'Sınıf'}
-                    borderColor={'#ccc'}
-                    fontFamily={'KanitL'}
                     onPress={onOpen}
                     selectedGrade={selectedGrade ? `${selectedGrade}.Sınıf` : "Sınıf Seçin"}
                 />

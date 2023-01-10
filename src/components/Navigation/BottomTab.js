@@ -8,7 +8,7 @@ import {Ionicons} from "@expo/vector-icons"
 import Home from '../../screens/Home';
 import Search from '../../screens/Search';
 import Answers from '../../screens/Answers';
-import Account from '../../screens/Account';
+import Settings from '../../screens/Settings';
 import Camera from '../../screens/Camera';
 import CustomTabButton from './CustomTabButton';
 
@@ -32,8 +32,8 @@ export default function BottomTab() {
         <Tab.Screen name={'Answers'} component={Answers} options={{
           tabBarIcon:({color})=><Ionicons name='file-tray-outline' size={24} color={color}/>
         }}/>
-        <Tab.Screen name={'Account'} component={Account} options={{
-          tabBarIcon:({color})=><Ionicons name='person-outline' size={22} color={color}/>
+        <Tab.Screen name={'Settings'} component={Settings} options={{
+          tabBarIcon:({color})=><Ionicons name='md-ellipsis-horizontal' size={24} color={color}/>
           }}/>
     </Tab.Navigator>
   )

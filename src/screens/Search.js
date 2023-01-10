@@ -1,10 +1,16 @@
-import { View,Image, Text } from 'react-native'
 import React from 'react'
+import { StyledContainer } from '../components/Shared/styles'
+import LessonsRadioGroup from '../components/Search/LessonsRadioGroup'
+import SearchField from '../components/Search/SearchField'
+import KeyboardAvoidingWrapper from '../components/Shared/KeyboardAvodingWrapper'
 
 export default function Search() {
   return (
-    <View style={{flex:1}}>
-      <Text>Search</Text>
-    </View>
+    <KeyboardAvoidingWrapper>
+      <StyledContainer style={{paddingTop:0}}>
+          <SearchField/>
+          <LessonsRadioGroup/>
+      </StyledContainer>
+    </KeyboardAvoidingWrapper>
   )
 }
