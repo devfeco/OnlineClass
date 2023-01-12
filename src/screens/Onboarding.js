@@ -14,7 +14,6 @@ export default function Onboarding(props) {
             console.error('Error @setItem: ',err);
         }
     }
-
     return (
         <View style={styles.container}>
             <View style={styles.illustration}>
@@ -38,7 +37,6 @@ export default function Onboarding(props) {
         </View>
     )
 }
-
 const styles = StyleSheet.create({
     container:{
         flex:1

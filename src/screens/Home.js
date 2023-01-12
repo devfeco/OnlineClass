@@ -60,7 +60,6 @@ export default function Home(props) {
     </StyledContainer>
   )
 }
-
 const HomeHeader = styled.View`
     background-color:${colors.primary};
     height:10%
@@ -78,21 +77,17 @@ const Avatar = styled.Image`
     border-width:1px;
     border-color:${colors.secondary};
 `
-
 const HomeBody = styled.View`
     height:82%;
 `
-
 const LessonsContainer = styled.View`
   width:100%;
   height:20%;
 `
-
 const QuestionsContainer = styled.View`
   width:100%;
   height:77%;
 `
-
 const Seperator = styled.View`
     height:2px;
     background-color:${colors.disable};
@@ -103,7 +98,6 @@ const Seperator = styled.View`
     margin-left:2%;
     justify-content:center;
 `
-
 const SeperatorText = styled.Text`
   font-family:${'KanitL'};
   position:absolute;

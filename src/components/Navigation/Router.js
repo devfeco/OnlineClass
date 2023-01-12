@@ -38,7 +38,7 @@ export default function Router() {
           headerStyle:{
             backgroundColor:colors.white
           }
-        }} initialRouteName={'OnBoarding'}>
+        }} initialRouteName={viewedOnboarding ? 'Bottomtab' : 'Onboarding'}>
           <Stack.Screen 
                 name='BottomTab' 
                 component={BottomTab} 
@@ -49,12 +49,12 @@ export default function Router() {
               options={{headerShown:false}}
             />
             {
-              viewedOnboarding || 
+              viewedOnboarding ||
               <>
                 <Stack.Screen 
-                name='Onboarding' 
-                component={Onboarding} 
-                options={{headerShown:false}}/>
+                  name='Onboarding' 
+                  component={Onboarding} 
+                  options={{headerShown:false}}/>
                 <Stack.Screen 
                   name='Authentication' 
                   component={Authentication} 
@@ -72,10 +72,10 @@ export default function Router() {
                     headerTitleAlign:'center',
                     headerLeft:(props)=>(<BackButton {...props}/>)
                     }}/>
-                    <Stack.Screen 
-                      name='CreateAnAccount' 
-                      component={CreateAnAccount} 
-                      options={{headerShown:false}}/>
+                <Stack.Screen 
+                    name='CreateAnAccount' 
+                    component={CreateAnAccount} 
+                    options={{headerShown:false}}/>
               </>
             }
         </Stack.Navigator>

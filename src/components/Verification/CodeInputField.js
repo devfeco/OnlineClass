@@ -2,28 +2,21 @@ import { StyleSheet, Text, View } from 'react-native'
 import React , {useRef , useEffect} from 'react';
 import { CodeInputSection , HiddenTextInput , CodeInputsContainer , CodeInput , CodeInputFocused, colors} from '../Shared/styles';
 import { useState } from 'react';
-
 export default function CodeInputField({setPinReady,code,setCode,maxLength}) {
     const codeDigitsArray = new Array(maxLength).fill(0);
-
     const textInputRef = useRef(null);
-
     const [inputContainerIsFocused,setInputContainerIsFocused] = useState(false);
-
     const handleOnBlur = () => {
         setInputContainerIsFocused(false);
     }
-
     const handleOnPress = () => {
         setInputContainerIsFocused(true);
         textInputRef?.current?.focus();
     }
-
     useEffect(()=>{
         setPinReady(code.length === maxLength);
         return () => setPinReady(false)
     },[code]);
-
     const toCodeDigitInput = (_value,index) => {
         const emptyInputChar = ' ';
         const digit = code[index] || emptyInputChar;
@@ -38,7 +31,6 @@ export default function CodeInputField({setPinReady,code,setCode,maxLength}) {
             </StyledCodeInput>
         )
     }
-
   return (
     <CodeInputSection>
         <CodeInputsContainer onPress={handleOnPress}>

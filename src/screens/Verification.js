@@ -3,7 +3,6 @@ import React ,{ useState } from 'react'
 import KeyboardAvoidindWrapper from '../components/Shared/KeyboardAvodingWrapper'
 import { StyledContainer , TopHalf , BottomHalf , colors, StyledButton} from '../components/Shared/styles'
 import CodeInputField from '../components/Verification/CodeInputField';
-import Button from '../components/Shared/Button'
 import VerificationModal from '../components/Verification/VerificationModal';
 import {VerifyCode} from '../managers/AuthenticationManager'
 
@@ -13,7 +12,6 @@ export default function Verification({navigation,route:{params:{phoneNumber}}}) 
   const [isSubmitting,setIsSubmitting] = useState(false);
   const MAX_CODE_LENGTH = 4;
 
-  //Modal
   const [modalVisible,setModalVisible] = useState(false);
   const [verificationSuccessfull,setVerificationSuccessfull] = useState(false);
   const [requestMessage,setrequestMessage] = useState('');

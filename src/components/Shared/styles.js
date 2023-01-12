@@ -19,7 +19,7 @@ export const colors = {
     frost:'#f9f6f6'
 };
 
-const {white,primary,secondary,disable,grey,green} = colors;
+const {white,primary,secondary,disable,grey,green,tertiary} = colors;
 
 export const StyledContainer = styled.View`
     flex:1;
@@ -38,13 +38,12 @@ export const PageTitle = styled.Text`
     font-size:30px;
     text-align:center;
     font-weight:bold;
-    color:${secondary};
+    color:${tertiary};
     padding:10px;
-
 `
 
 export const InfoText  = styled.Text`
-    color:${secondary};
+    color:${tertiary};
     font-size:15px;
     text-align:center;
 `
@@ -110,23 +109,25 @@ export const CodeInputFocused = styled(CodeInput)`
 
 //Modal Components 
 export const ModalContainer = styled(StyledContainer)`
-    justify-content:center;
+    justify-content:flex-end;
     align-items:center;
     background-color:rgba(0,0,0,0.2);
 `
 
 export const ModalView = styled.View`
-    margin:20px;
-    background-color:white;
-    border-radius:20px;
-    padding:35px;
+    margin:60%;
+    background-color:rgba(255,255,255,0.9);
+    border-radius:10px;
     align-items:center;
     elevation:5;
     shadow-color:#000;
     shadow-offset:0px 2px;
     shadow-opacity:0.25;
     shadow-radius:4px;
-    width:90%;
+    width:100%;
+    height:15%;
+    flex-direction:row;
+    justify-content:flex-end
 `
 //Modal components end
 

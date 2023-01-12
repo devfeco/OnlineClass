@@ -4,7 +4,8 @@ import { colors, StyledContainer } from '../components/Shared/styles'
 import styled from 'styled-components'
 import {Ionicons} from '@expo/vector-icons'
 
-export default function Settings() {
+export default function Settings(props) {
+  const {navigate} = props.navigation;
   return (
     <StyledContainer style={{paddingTop:0}}>
       <Header>
@@ -63,7 +64,7 @@ export default function Settings() {
           <Ionicons name='md-chevron-forward' size={20} color={colors.tertiary}/>
         </Button>
 
-        <Button>
+        <Button onPress={()=>navigate('Onboarding')}>
           <InnerButtonView>
             <Ionicons name='md-log-out-outline' size={20} color={colors.red}/>
             <ButtonText secondary>

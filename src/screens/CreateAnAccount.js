@@ -8,6 +8,7 @@ import { Actionsheet , useDisclose , Box} from 'native-base'
 import grades from '../../assets/data/grades'
 import { Register } from '../managers/AuthenticationManager'
 import {Ionicons} from '@expo/vector-icons'
+import ModalContent from '../components/Shared/ModalContent'
 
 export default function CreateAnAccount(props) {
     const [isFocused,setFocused] = useState(false);
@@ -97,14 +98,14 @@ export default function CreateAnAccount(props) {
 const SuccessAlert = ({modalVisible,onPress}) => {
     return(
         <Modal animationType='slide' visible={modalVisible} transparent={true}>
-            <ModalContainer style={{backgroundColor:'rgba(0,0,0,0.2)'}}>
-                <ModalView style={{backgroundColor:'rgba(234,240,240,0.95)'}}>
-                    <Ionicons name='md-checkmark-circle' size={112} color={colors.green}/>
-                    <Text style={{fontFamily:'KanitL',fontSize:21,color:colors.tertiary}}>Hesabınız Başarıyla Oluşturuldu</Text>
-                    <StyledButton onPress={onPress} style={{backgroundColor:colors.green}}>
-                        <Text style={{color:colors.white,fontFamily:'KanitL',letterSpacing:1,fontSize:24}}>Devam Et</Text>
-                    </StyledButton>
-                </ModalView>
+            <ModalContainer>
+                <ModalContent
+                    success
+                    title={'Tebrikler'}
+                    message={'Hesabınız başarıyla oluşturuldu'}
+                    icon={'md-checkmark-circle'}
+                    buttonHandler={onPress}
+                />
             </ModalContainer>
         </Modal>
     );
